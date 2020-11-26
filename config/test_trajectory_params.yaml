@@ -1,0 +1,14 @@
+# Tse_initial : [[1,0,0,0.003],[0,1,0,0],[0,0,1,0.3996],[0,0,0,1]] # Initial configuration of end effector wrt space frame
+Tse_initial : [[0,0,1,0],[0,1,0,0],[-1,0,0,0.5],[0,0,0,1]]
+Tsc_initial : [[1,0,0,1],[0,1,0,0],[0,0,1,0.025],[0,0,0,1]] # Initial configuration of cube wrt space frame
+Tsc_final : [[0,1,0,0],[-1,0,0,-1],[0,0,1,0.025],[0,0,0,1]] # Final configuration of cube wrt space frame
+# Tce_grasp : [[0,0,1,0.015],[0,1,0,0],[-1,0,0,0.0],[0,0,0,1]] # Grasping configuration of end effector wrt cube
+Tce_grasp : [[-0.7071, 0 , 0.7071, 0],[0,1,0,0],[-0.7071, 0, -0.7071, 0],[0,0,0,1]]
+# Tce_standoff : [[0,0,1,0],[0,1,0,0],[-1,0,0,0.1],[0,0,0,1]] # Standoff configuration of end effector wrt cube
+Tce_standoff : [[-0.7071, 0 , 0.7071, 0],[0,1,0,0],[-0.7071, 0, -0.7071, 0.06],[0,0,0,1]]
+
+k : 1 # The number of trajectory reference configurations per 0.01 seconds
+max_ang_vel : 0.1 # rad/s
+max_lin_vel : 0.1 # m/s
+time_scaling : 5 # 3 for cubic, 5 for Quintic time scaling
+trajectory_type : "Cartesian" # Screw or Cartesian

@@ -1,0 +1,14 @@
+config: 
+  chasis: [0,0,0] # phi, x, y (rad,m)
+  arm: [0,0,0,0,0] # 5 joint angles (rad)
+  wheel: [0,0,0,0] # 4 wheel angles (rad)
+
+controls:
+  arm: [2,0.5,1,0,1] # 5 joint speeds (rad/s)
+  wheel: [10,10,10,10] # 4 wheel speeds (rad/s)
+
+timestep: 0.001 # timestep i.e delta t (s)
+
+limits:
+  arm: [5,5,5,5,5] # joint speed limit (rad/s)
+  wheel: [20,20,20,10] # wheel speed limit (rad/s) +- value

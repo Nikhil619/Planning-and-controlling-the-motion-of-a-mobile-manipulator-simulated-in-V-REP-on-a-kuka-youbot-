@@ -1,0 +1,26 @@
+chasis:
+  wheel_rad: 0.0475 #(m)
+  l: 0.235
+  w: 0.15
+  gamma: [-0.785,0.785,-0.785,0.785] 
+  height: 0.0963
+
+arm:
+  Tbo : [[1,0,0,0.1662],[0,1,0,0],[0,0,1,0.0026],[0,0,0,1]] # The fixed offset from the chassis frame {b} to the base frame of the arm {0}
+  Moe : [[1,0,0,0.033],[0,1,0,0],[0,0,1,0.6546],[0,0,0,1]] # arm is at its home configuration (all joint angles zero), the end-effector frame {e} relative to the arm base frame {0}
+  Blist : [[0,0,0,0,0],[0,-1,-1,-1,0],[1,0,0,0,1],[0,-0.5076,-0.3526,-0.2176,0],[0.033,0,0,0,0],[0,0,0,0,0]]
+
+joint_limits: [[-1,1],[-1.9,1.2],[-1.9,1.5],[-2.89,2.89],[-2.89,2.89]] # joint speed limit (rad/s)
+# joint_limits: [[-1000,1000],[-10000.2,1000.2],[-1000.8,1000.5],[-2000.89,2000.89],[-20000.89,20000.89]] # joint speed limit (rad/s)
+
+velocity_limits:
+  arm: [10,10,10,10,10] # joint speed limit (rad/s)
+  wheel: [30,30,30,30] # wheel speed limit (rad/s) +- value
+  # arm: [10000,10000,10000,10000,1000] # joint speed limit (rad/s)
+  # wheel: [3000,3000,3000,3000] # wheel speed limit (rad/s) +- value
+
+initial_config :
+  chasis : [0.485,0,0.25]
+  arm : [0,0,0,0,0]
+  wheel : [0,0,0,0]
+  gripp_state : 0
