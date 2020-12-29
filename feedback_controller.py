@@ -1,7 +1,6 @@
 """
 Created on Mon 20, 2020
 
-@author : Fayyaz Pocker Chemban
 """
 
 import numpy as np
