@@ -1,0 +1,25 @@
+Tse_initial : [[0,0,1,0],[0,1,0,0],[-1,0,0,0.5],[0,0,0,1]]
+
+# newTask configuration
+Tsc_initial : [[1,0,0,1],[0,1,0,0],[0,0,1,0.025],[0,0,0,1]] # Initial configuration of cube wrt space frame
+Tsc_final : [[0,1,0,0],[-1,0,0,-1],[0,0,1,0.025],[0,0,0,1]] # Final configuration of cube wrt space frame
+
+# Best and overshoot configuration
+# Tsc_initial : [[1,0,0,1],[0,1,0,0],[0,0,1,0.025],[0,0,0,1]] # Initial configuration of cube wrt space frame
+# Tsc_final : [[0,1,0,0],[-1,0,0,-1],[0,0,1,0.025],[0,0,0,1]] # Final configuration of cube wrt space frame
+
+# Configuration of the end effector wrt to the cube is set to  135 degree clockwise wrt to the cube's y axis...hence phi = -135 and rotation matrix is Ry
+Tce_grasp : [[-0.7071, 0 , 0.7071, 0.02],[0,1,0,0],[-0.7071, 0, -0.7071, -0.02],[0,0,0,1]] # Grasping configuration of end effector wrt cube...
+Tce_standoff : [[-0.7071, 0 , 0.7071, 0],[0,1,0,0],[-0.7071, 0, -0.7071, 0.06],[0,0,0,1]] # Standoff configuration of end effector wrt cube
+
+
+k : 1 # The number of trajectory reference configurations per 0.01 seconds
+max_ang_vel : 0.1 # rad/s
+max_lin_vel : 0.1 # m/s
+time_scaling : 5 # 3 for cubic, 5 for Quintic time scaling
+trajectory_type : "Screw" # Screw or Cartesian
+
+Kp : 1
+Ki : 0.01
+
+timestep : 0.01
